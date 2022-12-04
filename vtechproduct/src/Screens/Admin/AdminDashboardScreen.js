@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import { useNavigate } from 'react-router'
 import { useDispatch,useSelector } from 'react-redux'
 import { logout } from '../../Store/Reducers/AuthenticationSlice'
-
+import Sidebar from '../../Components/Sidebar'
 const AdminDashboardScreen = () => {
   const user = useSelector((state) => state.auth.user);
   const dispatch= useDispatch();
@@ -15,8 +15,9 @@ const AdminDashboardScreen = () => {
     }
   },[user])
   return (
-    <div className='conatiner-fluid m-0 p-0 border border-2 border-warning'>
-        <h1>This is the admin dashboard screen</h1>
+    <div className='conatiner-fluid w-100 m-0 p-0 border border-2 border-warning'>
+      <Sidebar></Sidebar>
+        
         <button onClick={()=>{dispatch(logout())}}>Logout</button>
     </div>
   )

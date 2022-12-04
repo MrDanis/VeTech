@@ -7,6 +7,7 @@ const NotAllowed = ({role,children}) => {
     return children
   }else{
     return (
+      
          <Navigate to={'/'}></Navigate>
     )
   }

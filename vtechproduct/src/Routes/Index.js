@@ -7,7 +7,7 @@ import NotAllowed from '../CommonComponents/NotAllowed'
 const Index = () => {
   const user = useSelector((state) => state.auth.user);
   return (
-    <div className='container-fluid m-0 p-0 border border-0 border-dark d-flex align-items-center justify-content-center' style={{minHeight:'100vh'}}>
+    <div className='container-fluid m-0 p-0 border border-0 border-dark d-flex align-items-center justify-content-center' >
      
       {
        
