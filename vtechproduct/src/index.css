@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.offcanvas .offcanvas-start .show{
+  width:50%!important;
+}
+/* this media qurey is not working */
+@media (min-width:'320px') and (min-width:'480px') {
+  .container-fluid{
+     padding-left: 1rem!important;
+     padding-right: 1rem!important;
+  }
+}

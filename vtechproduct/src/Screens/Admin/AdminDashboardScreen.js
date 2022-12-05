@@ -27,7 +27,6 @@ const AdminDashboardScreen = () => {
       <GenralDisplayInfo></GenralDisplayInfo>
       <OvierViewSection></OvierViewSection>
       <ProductsTable></ProductsTable>
-        {/* <button onClick={()=>{dispatch(logout())}}>Logout</button> */}
     </div>
   )
 }

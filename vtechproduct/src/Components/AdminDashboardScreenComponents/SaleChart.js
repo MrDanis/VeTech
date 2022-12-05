@@ -1,34 +1,68 @@
 import React,{useState} from 'react'
 import {
-    Chart,
-    BarSeries,
-    Title,
-    ArgumentAxis,
-    ValueAxis,
-  } from '@devexpress/dx-react-chart-material-ui';
-  import { Animation } from '@devexpress/dx-react-chart';
-const SaleChart = () => {
-    const [chartData,setchartData] = useState([
-    { year: '1950', population: 2.525 },
-    { year: '1960', population: 3.018 },
-    { year: '1970', population: 3.682 },
-    { year: '1980', population: 4.440 },
-    { year: '1990', population: 5.310 },
-    { year: '2000', population: 6.127 },
-    { year: '2010', population: 6.930 },])
-  return (
-    <div className='container-fluid m-0 p-3'>
-      {/* <Chart data={chartData}>
-          <ArgumentAxis />
-          <ValueAxis max={7} />
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+export const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'top',
+      display:false
+    },
+    title: {
+      display: true,
+      text: 'Sales Chart',
+      align:'start',
+      font:{
+        size:24,
+        color:'#ff9f40'
+      }
+    },
+  },
+};
+const labels = ['2011', '2012', '2013', '2014', '2015', '2016', '2017'];
 
-          <BarSeries
-            valueField="population"
-            argumentField="year"
-          />
-          <Title text="Sales Chart" />
-          <Animation />
-        </Chart> */}
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: [10,5,10,15,10,20,20],
+      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    },
+    {
+      label: 'Dataset 2',
+      data:  [5,10,15,10,20,10,15],
+      borderColor: 'rgb(53, 162, 235)',
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+  ],
+};
+
+const SaleChart = () => {
+  return (
+    <div className='container-fluid d-flex align-items-center justify-content-center m-0 px-5 p-3 border border-0 border-danger' style={{width:'100%',height:'30rem'}}>
+       <Line options={options} data={data} />;
+     
     </div>
   )
 }
