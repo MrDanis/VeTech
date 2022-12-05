@@ -32,7 +32,7 @@ const ThemeButton = (props) => {
         {props.btnText}
       </button> 
        :
-      <button className='btn rounded-pill w-50 my-2 fw-bold' style={{backgroundColor:props.btnBgColor,fontSize:'0.875rem',color:styles.lightTheme.btnTextColor}}>
+      <button className='btn my-2 fw-bold' style={{backgroundColor:props.btnBgColor,fontSize:'0.875rem',color:styles.lightTheme.btnTextColor}}>
         {props.btnText}
       </button>
     }
