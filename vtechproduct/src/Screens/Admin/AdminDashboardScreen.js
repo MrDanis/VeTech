@@ -22,7 +22,6 @@ const AdminDashboardScreen = () => {
   },[user])
   return (
     <div className='conatiner-fluid w-100 m-0 p-0 border border-0 border-warning'>
-      <Sidebar></Sidebar>
       <SaleChart></SaleChart>
       <GenralDisplayInfo></GenralDisplayInfo>
       <OvierViewSection></OvierViewSection>

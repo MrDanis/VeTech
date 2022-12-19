@@ -16,49 +16,54 @@ const Sidebar = () => {
   const [isHumbergerVisible,setisHumbergerVisible]= useState('visible');
   useEffect(()=>{},[])
   return (
-    <div className='container-fluid border border-0 border-success'>
+    <div className='container-fluid border border-2 border-success'>
 
-    <nav className="navbar navbar-expand-lg navbar-light py-3 border border-0 border-success">
-    <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-light pt-0 py-3 border border-0 border-success">
+    <div className="container-fluid px-0 border border-2 border-danger">
     <button className="btn d-block d-md-none shadow border border-0 border-danger" onClick={()=>{setisHumbergerVisible('hidden')}} style={{visibility:isHumbergerVisible}} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-md-inline-flex flex-row " style={{cursor:'pointer'}}>
+      <ul className="w-100 navbar-nav ms-auto mb-2 mb-lg-0 d-none d-md-flex flex-column align-items-center justify-content-center border border-2 border-success" style={{cursor:'pointer'}}>
+        <li className="nav-item mt-2 mx-2">
+          <img className='img-fluid mt-2 m-0 p-0'  src={mainLogo} alt='text'></img>
+        </li>
+        <li className="nav-item mt-2 mx-2">
+          {/* <Link to={'/'} className="nav-link active" aria-current="page" >Dashboard</Link> */}
+          <Link to={'/admindashboard'} className={window.location.pathname.includes('dashboard')?'nav-link fw-bold':'nav-link'} aria-current="page" >Dashboard</Link>
+        </li>
+        <li className="nav-item mt-2 mx-2">
+          <Link to={'/admin/products'} className={window.location.pathname.includes('products')?'nav-link fw-bold':'nav-link'}>Products</Link>
+        </li>
+        <li className="nav-item mt-2 mx-2">
+          <Link to={'/admin/orders'} className={window.location.pathname.includes('orders')?'nav-link fw-bold':'nav-link'}>Orders</Link>
+        </li>
+        <li className="nav-item mt-2 mx-2">
+          <Link to={'/admin/stores'} className={window.location.pathname.includes('stores')?'nav-link fw-bold':'nav-link'}>Stores</Link>
+        </li>
+        <li className="nav-item mt-2 mx-2">
+          <Link to={'/admin/profile'} className={window.location.pathname.includes('profile')?'nav-link fw-bold':'nav-link'}>Profile</Link>
+        </li>
+        <li className="nav-item mt-2 mx-2">
+          <Link to={'/admin/settings'} className={window.location.pathname.includes('settings')?'nav-link fw-bold':'nav-link'}>Settings</Link>
+        </li>
+     
         {/* <li className="nav-item mx-2">
-          <Link to={'/'} className="nav-link active" aria-current="page" >Dashboard</Link>
-        </li>
-        <li className="nav-item mx-2">
-          <Link to={'/conatct'} className="nav-link">Products</Link>
-        </li>
-        <li className="nav-item mx-2">
-          <Link to={'/conatct'} className="nav-link">Orders</Link>
-        </li>
-        <li className="nav-item mx-2">
-          <Link to={'/conatct'} className="nav-link">Stores</Link>
-        </li>
-        <li className="nav-item mx-2">
-          <Link to={'/conatct'} className="nav-link">Profile</Link>
-        </li>
-      */}
-        <li className="nav-item mx-2">
           <Link to={'/conatct'} className="nav-link"> 
           <ThemeButton btnBgColor={styles.lightTheme.btnColor} btnText="Add Products">
 
           </ThemeButton>
             
             </Link>
-        </li> 
+        </li>  */}
         {
          !user?
        <li className="nav-item mx-2" onClick={()=>{dispatch(login())}} style={{cursor:'pointer'}}>
          <span className="nav-link" >SignIn</span>
        </li>:
       
-       <li className="nav-item mx-0 d-flex align-items-center justify-content-center" style={{cursor:'pointer'}}>
-            
+       <li className="d-none nav-item mx-0 d-flex align-items-center justify-content-center " style={{cursor:'pointer'}}>            
        <div className="dropdown position-relative">
          <button className="btn shadow" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style={{backgroundColor:'none',outline:'none'}}>
-           {/* <img className='img-fluid' style={{width:'25px',height:'25px'}} src={FiLogIn} alt=''></img> */}
            <FiLogIn></FiLogIn>
          </button>
          <ul className="dropdown-menu shadow py-2 px-3" aria-labelledby="dropdownMenuButton1" style={{marginLeft:'-100px',marginTop:'.5rem',border:'none'}}>
@@ -104,12 +109,12 @@ const Sidebar = () => {
     </ul>
      {/*User menu in mobile*/}
      <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{width:'50%'}}>
- <div className="offcanvas-header">
-   <h5 className="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+ <div className="offcanvas-header d-flex justify-content-end">
+   <h5 className="offcanvas-title d-none" id="offcanvasExampleLabel">Offcanvas</h5>
    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" onClick={()=>{setisHumbergerVisible('visible')}} ></button>
  </div>
  <div className="offcanvas-body">
- <ul className="navbar-nav ms-auto mb-2 mb-lg-0 border border-2 border-success">
+ <ul className="navbar-nav ms-auto mb-2 mb-lg-0 border border-0 border-success">
   <li>
     <img className='img-fluid m-0 p-0' style={{height:'10rem'}} src={mainLogo} alt='text'></img>
   </li>
