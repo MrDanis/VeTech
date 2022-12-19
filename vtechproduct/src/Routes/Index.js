@@ -8,7 +8,7 @@ import AdminMainView from '../Views/AdminMainView'
 const Index = () => {
   const user = useSelector((state) => state.auth.user);
   return ( 
-    <div className='container-fluid m-0 p-0 border border-2 border-dark d-flex align-items-center justify-content-center' >
+    <div className='container-fluid m-0 p-0 border border-0 border-dark d-flex align-items-center justify-content-center' >
      
       {
        

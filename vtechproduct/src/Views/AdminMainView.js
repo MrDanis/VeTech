@@ -18,14 +18,14 @@ const AdminMainView = ({component}) => {
              <div className='col-12 col-sm-4 col-md-3 col-lg-2 m-0 p-0'>
                  <Sidebar></Sidebar>
              </div>
-             <div className='col-12 col-sm-8 col-md-9 col-lg-10 m-0 p-0 border border-2 border-danger'>
+             <div className='col-12 col-sm-8 col-md-9 col-lg-10 m-0 p-0 border border-0 border-danger'>
               <div className='container-fluid m-0 p-0 border border-0 border-dark'>
                 <div className='row m-0 p-0 border border-0 border-primary'>
                     <div className='col-12 m-0 p-0 d-flex flex-row align-items-center justify-content-between border border-0 border-danger'>
                         <p className='mx-5 text-uppercase fw-bold fs-3 text-start'>
                              {component}
                         </p>
-                        <p className='text-end'>
+                        <p className='text-end border border-0 border-success mt-2 mx-5'>
                              <Link to={'/admin/addProduct'}> 
                                <ThemeButton btnBgColor={styles.lightTheme.btnColor} btnText="Add Products">
                                </ThemeButton>

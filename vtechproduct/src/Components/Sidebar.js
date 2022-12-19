@@ -16,14 +16,14 @@ const Sidebar = () => {
   const [isHumbergerVisible,setisHumbergerVisible]= useState('visible');
   useEffect(()=>{},[])
   return (
-    <div className='container-fluid border border-2 border-success'>
+    <div className='container-fluid border border-0 border-success shadow' style={{height:'100vh'}}>
 
-    <nav className="navbar navbar-expand-lg navbar-light pt-0 py-3 border border-0 border-success">
-    <div className="container-fluid px-0 border border-2 border-danger">
+    <nav className="navbar navbar-expand-lg navbar-light pt-0 py-3 border border-0 border-success" >
+    <div className="container-fluid m-0 p-0 px-0 border border-0 border-danger">
     <button className="btn d-block d-md-none shadow border border-0 border-danger" onClick={()=>{setisHumbergerVisible('hidden')}} style={{visibility:isHumbergerVisible}} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <ul className="w-100 navbar-nav ms-auto mb-2 mb-lg-0 d-none d-md-flex flex-column align-items-center justify-content-center border border-2 border-success" style={{cursor:'pointer'}}>
+      <ul className="w-100 navbar-nav ms-auto mb-2 mb-lg-0 d-none d-md-flex flex-column align-items-center justify-content-center border border-0 border-success" style={{cursor:'pointer'}}>
         <li className="nav-item mt-2 mx-2">
           <img className='img-fluid mt-2 m-0 p-0'  src={mainLogo} alt='text'></img>
         </li>
