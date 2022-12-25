@@ -16,7 +16,7 @@ const Sidebar = () => {
   const [isHumbergerVisible,setisHumbergerVisible]= useState('visible');
   useEffect(()=>{},[])
   return (
-    <div className='container-fluid border border-0 border-success shadow' style={{height:'100vh'}}>
+    <div className='container-fluid border border-0 border-success shadow position-sticky' style={{height:'100vh'}}>
 
     <nav className="navbar navbar-expand-lg navbar-light pt-0 py-3 border border-0 border-success" >
     <div className="container-fluid m-0 p-0 px-0 border border-0 border-danger">

@@ -10,6 +10,7 @@ import AdminStore from '../Screens/Admin/AdminStore'
 import AdminProfileScreen from '../Screens/Admin/AdminProfileScreen'
 import AdminSettingsScreen from '../Screens/Admin/AdminSettingsScreen'
 import AddProductScreen from '../Screens/Admin/AddProductScreen'
+import '../index.css'
 const AdminMainView = ({component}) => {
   return (
     <>
@@ -18,7 +19,7 @@ const AdminMainView = ({component}) => {
              <div className='col-12 col-sm-4 col-md-3 col-lg-2 m-0 p-0'>
                  <Sidebar></Sidebar>
              </div>
-             <div className='col-12 col-sm-8 col-md-9 col-lg-10 m-0 p-0 border border-0 border-danger'>
+             <div className='col-12 col-sm-8 col-md-9 col-lg-10 m-0 p-0 border border-0 border-danger adminMainBody' style={{height:'100vh',overflow:'hidden',overflowY:'scroll'}}>
               <div className='container-fluid m-0 p-0 border border-0 border-dark'>
                 <div className='row m-0 p-0 border border-0 border-primary'>
                     <div className='col-12 m-0 p-0 d-flex flex-row align-items-center justify-content-between border border-0 border-danger'>

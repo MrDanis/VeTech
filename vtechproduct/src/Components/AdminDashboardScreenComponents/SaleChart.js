@@ -61,7 +61,7 @@ export const data = {
 const SaleChart = () => {
   return (
     <div className='container-fluid d-flex align-items-center justify-content-center m-0 px-5 p-3 border border-0 border-danger' style={{width:'100%',height:'30rem'}}>
-       <Line options={options} data={data} />;
+       <Line options={options} data={data} />
      
     </div>
   )

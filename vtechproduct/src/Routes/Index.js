@@ -14,12 +14,11 @@ const Index = () => {
        
           <Router>
             <Routes>
+              {/* Public Routes without Auth */}
               <Route path='/' element={<Authentication componentType='singUp'></Authentication>}></Route>
               <Route path='/Login' element={<Authentication componentType='login'></Authentication>}></Route>
               <Route path='/Verification' element={<Authentication componentType='verification'></Authentication>}></Route>
-               {/* <Route path='/admindashboard' element={<NotAllowed role={user}>
-                <AdminDashboardScreen></AdminDashboardScreen>
-               </NotAllowed>}></Route> */}
+               {/* Admin Routes with auth Start */}
                <Route path='/admindashboard' element={<NotAllowed role={user}>
                 <AdminMainView component='dahsboard'></AdminMainView>
                </NotAllowed>}></Route>
@@ -41,6 +40,7 @@ const Index = () => {
                <Route path='/admin/addproduct' element={<NotAllowed role={user}>
                 <AdminMainView component='Add Products'></AdminMainView>
                </NotAllowed>}></Route>
+               {/* Admin Routes with auth Ends */}
              </Routes>
             </Router>
      
