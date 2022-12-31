@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { styles } from '../../Assets/StylesGlobal'
-// import ThemeButton from '../../CommonComponents/ThemeButton'
+import ThemeButton from '../../CommonComponents/ThemeButton'
 import P1 from '../../Assets/images/Product1.png'
 import '../../index.css'
 const AdminProductScreen = () => {
@@ -21,7 +21,7 @@ const AdminProductScreen = () => {
          <div className="col-12 col-sm-6 col-md-4 col-lg-3">
            <div className="px-1 p-3">
             <div className='conteiner-fluid m-0 p-0'>
-                <div className='row m-0  p-0 border border-0 border-gray productBoxMain shadow' style={{borderRadius:'.75rem'}}>
+                <div className='row m-0  p-0 border border-1 border-gray productBoxMain shadow' style={{borderRadius:'.75rem'}}>
                     <div className='col-12 col-md-6 col-lg-5 m-0 p-0  border border-0 border-danger' style={{ borderBottomLeftRadius:'.75rem',borderTopLeftRadius:'.75rem',backgroundImage:`url(${prodcutImg})`,backgroundPosition:'center',backgroundSize:'cover'}}>
                     </div>
                     <div className='col-12 col-md-6 col-lg-7 border border-0 border-success m-0 p-0'>

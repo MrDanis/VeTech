@@ -57,7 +57,7 @@ const AddProductScreen = () => {
          </div>
          <div className='col-12 my-3 m-0 p-0 d-flex align-items-center justify-content-start'>
          <ThemeButton  btnBgColor={styles.lightTheme.btnColor} btnText='Add product'></ThemeButton>
-            <button className='mx-2'>Cancel</button>
+            <button className='border border-1 shadow mx-2 btn btn-light'>Cancel</button>
          </div>
       </div>
     </div>

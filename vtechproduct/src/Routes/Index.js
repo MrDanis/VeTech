@@ -28,7 +28,16 @@ const Index = () => {
                <Route path='/admin/orders' element={<NotAllowed role={user}>
                 <AdminMainView component='orders'></AdminMainView>
                </NotAllowed>}></Route>
+               <Route path='/admin/orders/pending' element={<NotAllowed role={user}>
+                <AdminMainView component='orders'></AdminMainView>
+               </NotAllowed>}></Route>
                <Route path='/admin/stores' element={<NotAllowed role={user}>
+                <AdminMainView component='stores'></AdminMainView>
+               </NotAllowed>}></Route>
+               <Route path='/admin/stores/add' element={<NotAllowed role={user}>
+                <AdminMainView component='stores'></AdminMainView>
+               </NotAllowed>}></Route>
+               <Route path='/admin/stores/edit' element={<NotAllowed role={user}>
                 <AdminMainView component='stores'></AdminMainView>
                </NotAllowed>}></Route>
                <Route path='/admin/profile' element={<NotAllowed role={user}>
