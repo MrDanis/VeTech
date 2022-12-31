@@ -109,10 +109,10 @@ const AdminProductScreen = () => {
                           <div className="modal-dialog modal-dialog-centered">
                             <div className="modal-content">
                               <div className="modal-body">
-                                <p>Are you sure you want to delete this item ?</p>
-                                <p className='border border-0 border-danger d-flex align-items-center justify-content-end'>
-                                  <button className='mx-1 py-1 p-0 btn btn-light shadow' data-bs-dismiss="modal">Cancel</button>
-                                  <button className='mx-1 py-1 p-0 btn btn-danger' data-bs-dismiss="modal">Delete</button>
+                                <p className='my-2'>Are you sure you want to delete this item ?</p>
+                                <p className='mb-0 border border-0 border-danger d-flex align-items-center justify-content-end'>
+                                  <button className='w-25 mx-1 border border-1 btn btn-light shadow' data-bs-dismiss="modal">Cancel</button>
+                                  <button className='w-25 mx-1 border border-1 btn btn-danger' data-bs-dismiss="modal">Delete</button>
                                 </p>
                               </div>
                             </div>
@@ -754,7 +754,7 @@ const AdminProductScreen = () => {
                                 <p>Are you sure you want to delete this item ?</p>
                                 <p className='border border-0 border-danger d-flex align-items-center justify-content-end'>
                                   <button className='mx-1 py-1 p-0 btn btn-light shadow' data-bs-dismiss="modal">Cancel</button>
-                                  <button className='mx-1 py-1 p-0 btn btn-danger' data-bs-dismiss="modal">Delete</button>
+                                  <button className='mx-1 py-1 p-0 btn btn-danger' data-bs-dismiss="modal">Deleteeee</button>
                                 </p>
                               </div>
                             </div>
@@ -860,8 +860,8 @@ const AdminProductScreen = () => {
                               <div className="modal-body">
                                 <p>Are you sure you want to delete this item ?</p>
                                 <p className='border border-0 border-danger d-flex align-items-center justify-content-end'>
-                                  <button className='mx-1 py-1 p-0 btn btn-light shadow' data-bs-dismiss="modal">Cancel</button>
-                                  <button className='mx-1 py-1 p-0 btn btn-danger' data-bs-dismiss="modal">Delete</button>
+                                  <button className='w-50 mx- p-0 btn btn-light shadow' data-bs-dismiss="modal">Cancel</button>
+                                  <button className='w-50 mx- p-0 btn btn-danger' data-bs-dismiss="modal">Delete</button>
                                 </p>
                               </div>
                             </div>
